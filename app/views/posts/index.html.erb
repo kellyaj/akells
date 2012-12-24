@@ -1,0 +1,15 @@
+<br>
+<p>
+<div id="side_bio">
+<%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
+<p id="bio_mini"> Andrew Kelly is an aspiring web developer currently living in Chicago. This blog will usually be programming-related, with occasional tangents about other topics. </p>
+</div>
+<% @posts.each do |post| %>
+  <h2> 
+    <%= post.title %> 
+  </h2>
+  <p> <%= post.content %> </p>
+<% end %>
+
+
+<%= link_to 'New Post', new_post_path %>
