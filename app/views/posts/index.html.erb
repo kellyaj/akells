@@ -5,6 +5,12 @@
 <p id="bio_mini"> Andrew Kelly is an aspiring web developer currently living in Chicago. This blog will usually be programming-related, with occasional tangents about other topics. </p>
 </div>
 
+<div id="tag cloud">
+	<% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
+		<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+	<% end %>
+</div>
+
 <% @posts.each do |post| %>
   <h2 id="post_date"> 
     <%= post.title %> 
