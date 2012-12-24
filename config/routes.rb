@@ -17,4 +17,6 @@ Akells::Application.routes.draw do
 
   root :to => 'posts#index'
   get '/about' => 'pages#about', :as => 'about'
+
+  get 'tags/:tag', to: 'posts#index', as: :tag
 end
