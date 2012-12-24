@@ -1,6 +1,8 @@
 <br>
 <% @projects.each do |project| %>
+
   <h2>
+  	<%= image_tag project.avatar.url(:thumb) %>
     <%= project.name %>
   </h2>
   <p>

@@ -47,3 +47,4 @@ gem 'pry-remote'
 gem 'pry-nav'
 gem 'pry-stack_explorer'
 gem 'pry-rescue'
+gem "paperclip", "~> 3.0"

@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+	<%= image_tag @project.avatar.url(:thumb) %>
+</p>
 <p>
   <b>Name:</b>
   <%= @project.name %>
