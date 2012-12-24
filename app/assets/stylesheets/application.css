@@ -57,6 +57,11 @@ nav ul li {
 	margin-top: 10px;
 	border: 3px solid #475BB1;
 	padding: 10px;
+	background-color: #D9DBE5
+}
+
+.side_bio #bio_mini {
+	font-size: 115%;
 }
 
 #tag_cloud {
@@ -66,3 +71,5 @@ nav ul li {
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
 }
+
+
