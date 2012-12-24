@@ -20,7 +20,7 @@
   	<%= post.created_at.in_time_zone('Central Time (US & Canada)').strftime("%B %d, %Y %l:%M%p") %>
   </h3>
   <p id="post_content"> 
-  	<%= post.content %> 
+  	<%= simple_format(post.content) %> 
   </p>
   <p>
 		Tags: <%= raw post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %>
