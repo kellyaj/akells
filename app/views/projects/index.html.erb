@@ -2,8 +2,8 @@
 <% @projects.each do |project| %>
 
   <h2>
-  	<%= image_tag project.avatar.url(:thumb) %>
-    <%= project.name %>
+  	<%= link_to image_tag(project.avatar.url(:medium)), project.url %>
+    <%= link_to project.name, project.url %>
   </h2>
   <p>
     <%= project.description %>
