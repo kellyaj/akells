@@ -50,3 +50,4 @@ gem 'pry-stack_explorer'
 gem 'pry-rescue'
 gem "paperclip", "~> 3.0"
 gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'kaminari'

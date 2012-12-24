@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all(:limit => 100, :order => 'created_at DESC')
+      @posts = Post.order('created_at DESC').page(params[:page]).per(5)
     end
     
 
