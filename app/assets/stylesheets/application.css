@@ -50,8 +50,7 @@ nav ul li {
 	border: 1px solid #475BB1;
 }
 
-#side_bio {
-
+.side_bio {
 	float: right;
 	margin: 10px;
 	width: 200px;
@@ -62,7 +61,7 @@ nav ul li {
 
 #tag_cloud {
   width: 400px;
-  line-height: 1.6em; }
+  line-height: 1.6em;}
   .s { font-size: 0.8em; }
   .m { font-size: 1.2em; }
   .l { font-size: 1.8em; }
