@@ -1,13 +1,18 @@
 <br>
+<br>
+
 <% @projects.each do |project| %>
 
-  <h2>
+  <h2 id="project_image">
   	<%= link_to image_tag(project.avatar.url(:medium)), project.url %>
+  </h2>
+  <h2 id="project_name">
     <%= link_to project.name, project.url %>
   </h2>
-  <p>
+  <p id="project_description">
     <%= project.description %>
   </p>
 <% end %>
-
+<div id="new_project">
 <%= link_to 'New project', new_project_url %>
+</div>
