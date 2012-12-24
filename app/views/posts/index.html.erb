@@ -4,12 +4,19 @@
 <%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
 <p id="bio_mini"> Andrew Kelly is an aspiring web developer currently living in Chicago. This blog will usually be programming-related, with occasional tangents about other topics. </p>
 </div>
+
 <% @posts.each do |post| %>
-  <h2> 
+  <h2 id="post_date"> 
     <%= post.title %> 
   </h2>
-  <p> <%= post.content %> </p>
+  <h3>
+  	<%= post.created_at.strftime("%B %d, %Y") %>
+  </h3>
+  <p id="post_content"> 
+  	<%= post.content %> 
+  </p>
 <% end %>
 
-
-<%= link_to 'New Post', new_post_path %>
+<% if session[:user_id] %>
+	<%= link_to 'New Post', new_post_path %>
+<% end %>
