@@ -1,4 +1,12 @@
 class ProjectsController < ApplicationController
+  before_filter :admin_check, :only => [ :new, :update, :edit, :destroy ]
+
+  def admin_check
+    unless current_user && User.find(session[:user_id]).admin?
+      redirect_to root_url, notice: "You don't have permission to do that."
+    end
+  end
+  
   # GET /projects
   # GET /projects.json
   def index

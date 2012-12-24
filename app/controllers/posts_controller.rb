@@ -1,10 +1,17 @@
 class PostsController < ApplicationController
+  before_filter :admin_check, :only => [ :new, :update, :edit, :destroy ]
+
+  def admin_check
+    unless current_user && User.find(session[:user_id]).admin?
+      redirect_to root_url, notice: "You don't have permission to do that."
+    end
+  end
 
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag])
     else
-      @posts = Post.all
+      @posts = Post.all(:limit => 100, :order => 'created_at DESC')
     end
     
 
