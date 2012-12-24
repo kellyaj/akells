@@ -28,6 +28,10 @@ nav {
 nav a {
 	text-decoration:none;
 	padding: 10px;
+
+}
+nav a:hover {
+	display:none;
 }
 nav ul {
 	list-style: none;
