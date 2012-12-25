@@ -52,3 +52,4 @@ gem "paperclip", "~> 3.0"
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'kaminari'
 gem 'aws-sdk', '~> 1.3.4'
+gem 'RedCloth'
