@@ -14,8 +14,9 @@
   </p>
 <% end %>
 
+
 <% if session[:user_id] %>
-<div id="new_project">
-<%= link_to 'New project', new_project_url %>
+<div>
+<%= link_to 'New project', new_project_url, :id => "new_project" %>
 </div>
 <% end %>

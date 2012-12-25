@@ -31,7 +31,7 @@
 <% end %>
 
 <% if session[:user_id] %>
-	<%= link_to 'New Post', new_post_path %>
+	<%= link_to 'New Post', new_post_path, :id => "new_post" %>
 <% end %>
 
 <%= paginate @posts %>
