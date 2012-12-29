@@ -1,12 +1,34 @@
+<div class="side_bio">
+<%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
+<p id="bio_mini"> 
+	Andrew Kelly is an aspiring web developer currently living in Chicago. This blog will usually be programming-related, with occasional tangents about other topics. 
+</p>
+<div id="tag cloud">
+	<% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
+		<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+	<% end %>
+</div>	
+</div>
+
+<br />
 <h2>
   <%= @post.title %>
 </h2>
+<h3>
+  <%= @post.created_at.in_time_zone('Central Time (US & Canada)').strftime("%B %d, %Y %l:%M%p") %>
+</h3>
+<p>
+  <%= @post.content.html_safe %>
+</p>
 
 <p>
-  <b>Content:</b>
-  <%= @post.content %>
+		Tags: <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %>
 </p>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+
+<% if session[:user_id] %>
+	<%= link_to 'Edit', edit_post_path(@post) %> 
+<% end %>
