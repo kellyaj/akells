@@ -6,7 +6,13 @@ class Post < ActiveRecord::Base
 
   before_save :parse_text
 
+  acts_as_url :title
+
   def parse_text
   	self.content = RedCloth.new(content).to_html
+  end
+
+  def to_param
+  	url
   end
 end

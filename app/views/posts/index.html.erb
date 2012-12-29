@@ -14,7 +14,7 @@
 
 <% @posts.each do |post| %>
   <h2 id="post_date"> 
-    <%= post.title %> 
+    <%= link_to post.title, post_path(post) %> 
   </h2>
   <h3>
   	<%= post.created_at.in_time_zone('Central Time (US & Canada)').strftime("%B %d, %Y %l:%M%p") %>
