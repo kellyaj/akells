@@ -1,19 +1,28 @@
-<br>
-<br>
+<br />
+<br />
 
 <% @projects.each do |project| %>
-
-  <h2 id="project_image">
-  	<%= link_to image_tag(project.avatar.url(:medium)), project.url %>
-  </h2>
-  <h2 id="project_name">
-    <%= link_to project.name, project.url %>
-  </h2>
-  <p id="project_description">
-    <%= project.description %>
-  </p>
+	<div id="project_div">
+	<ul>
+		<li>
+		  <h2 id="project_image">
+		  	<%= link_to image_tag(project.avatar.url(:medium)), project.url %>
+		  </h2>
+		</li>
+		<li>
+		  <h2 id="project_name">
+		    <%= link_to project.name, project.url %>
+		  </h2>
+		</li>
+		<li>
+		  <p id="project_description">
+		    <%= project.description %>
+		  </p>
+  	</li>
+   <ul>
+   </div>
+   <br />
 <% end %>
-
 
 <% if session[:user_id] %>
 <div>

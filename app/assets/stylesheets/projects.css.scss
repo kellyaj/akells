@@ -5,6 +5,11 @@
 .project_class a {
 	text-decoration: none;
 }
+
+li {
+	list-style-type: none;
+}
+
 a:hover {
 	text-decoration: none;
 }
@@ -28,4 +33,8 @@ a:hover {
 	position: absolute;
 	bottom: 0;
 	padding: 20px;
+}
+
+#project_div {
+	float:left;
 }
