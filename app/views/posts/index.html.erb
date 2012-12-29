@@ -21,7 +21,9 @@
   </h3>
   <p id="post_content"> 
   	<%= truncate_html(post.content, :length => 420, :word_boundary => true) %>
-  	<%= link_to 'Read More', post_path(post) %> 
+  </p>
+  <p>
+  	<%= link_to 'Continue Reading', post_path(post), :id => "continue_reading" %>
   </p>
   <p>
 		Tags: <%= raw post.tag_list.map {|t| link_to t, tag_path(t)}.join(', ') %>
