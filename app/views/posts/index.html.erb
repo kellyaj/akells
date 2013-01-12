@@ -3,7 +3,7 @@
 <div class="side_bio">
 <%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
 <p id="bio_mini"> 
-	Andrew Kelly is an aspiring web developer currently living in Chicago. This blog will usually be programming-related, with occasional tangents about other topics. 
+	Andrew Kelly is an aspiring web developer currently living in Chicago. He recently became a novice apprentice at <%= link_to "8th Light", "http://www.8thlight.com" %>. 
 </p>
 <div id="tag cloud">
 	<% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
