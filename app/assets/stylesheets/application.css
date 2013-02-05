@@ -1,73 +1,117 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-body {
-	background-image: url(redox_01.png);
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-h2 {
-	color: #475BB1;
-	text-shadow: 1px 1px 1px #D9DBE5;
-	padding: 5px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Begin */
+
+.container {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 975px;
+	padding-top: 25px;
 }
 
 nav {
-	background-color: #D9DBE5;
-
-}
-nav a {
-	text-decoration:none;
+	background: red;
+	float: left;
 	padding: 10px;
-
-}
-nav a:hover {
-	display:none;
-}
-nav ul {
-	list-style: none;
-	margin:0;
-	padding:0;
+	padding-top: 36px;
 }
 
-nav ul li {
-	background-color: #D9DBE5;
-	display:block;
-	position:relative;
+nav li {
+	display: inline;
+	font-size: 24px;
+	padding: 70px;
+}
+
+.top_box {
+	background: gray;
+	float: right;
+	width: 467.5px;
+	height: 202px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+}
+
+.top_box img {
 	float:left;
 }
 
-#bio_pic {
-	border: 1px solid #475BB1;
+.bio {
+	background: green;
 }
 
-.side_bio {
-	float: right;
-	margin: 10px;
-	width: 200px;
-	margin-top: 10px;
-	border: 3px solid #475BB1;
+.post_content {
+	margin-right:10px;
+	margin-left: 10px;
+	float: left;
+	background: lightblue;
+}
+
+.clear {
+	clear: both;
+}
+
+.post_title {
+	font-size: 36px;
+}
+
+.post_date {
+	font-size: 16px;
+}
+
+.social_buttons {
+	background: darkred;
+	float: left;
 	padding: 10px;
-	background-color: #D9DBE5
+	padding-top: 36px;
 }
 
-.side_bio #bio_mini {
-	font-size: 115%;
-}
-
-#tag_cloud {
-  width: 400px;
-  line-height: 1.6em;}
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.8em; }
+.social_buttons li {
+	display: inline;
+	font-size: 24px;
+	padding: 70px;
 }

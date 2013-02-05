@@ -1,24 +1,12 @@
-<br>
-<p>
-<div class="side_bio">
-<%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
-<p id="bio_mini"> 
-	Andrew Kelly is an aspiring web developer currently living in Chicago. He recently became a novice apprentice at <%= link_to "8th Light", "http://www.8thlight.com" %>. 
-</p>
-<div id="tag cloud">
-	<% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
-		<%= link_to tag.name, tag_path(tag.name), class: css_class %>
-	<% end %>
-</div>	
-</div>
-
+<div class="post_content">
+<div class="clear"></div>
 <% @posts.each do |post| %>
-  <h2 id="post_date"> 
+  <h1 class="post_title"> 
     <%= link_to post.title, post_path(post) %> 
-  </h2>
-  <h3>
+  </h1>
+  <h2 class="post_date">
   	<%= post.created_at.in_time_zone('Central Time (US & Canada)').strftime("%B %d, %Y %l:%M%p") %>
-  </h3>
+  </h2>
   <p id="post_content"> 
   	<%= truncate_html(post.content, :length => 420, :word_boundary => true) %>
   </p>
@@ -37,5 +25,5 @@
 	<%= link_to 'New Post', new_post_path, :id => "new_post" %>
 <% end %>
 
-<br />
 <%= paginate @posts %>
+</div>
