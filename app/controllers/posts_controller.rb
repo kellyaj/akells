@@ -79,7 +79,17 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
-  
   end
+
+  def feed
+    @title = "Andrew Kelly's Blog"
+    @news_items = Post.order("updated_at desc")
+    @updated = @news_items.first.updated_at unless @news_items.empty?
+
+    respond_to do |format|
+      format.atom { render :layout => false }
+      format.rss { redirect_to feed_path(:format => :atom), :status => :moved_permanently }
+    end
+  end
+  
 end

@@ -15,8 +15,14 @@ Akells::Application.routes.draw do
 
   resources :posts
 
+  match '/feed' => 'posts#feed',
+  	:as => :feed,
+  	:defaults => { :format => 'atom' }
+
   root :to => 'posts#index'
+
   get '/about' => 'pages#about', :as => 'about'
 
   get 'tags/:tag', to: 'posts#index', as: :tag
+
 end

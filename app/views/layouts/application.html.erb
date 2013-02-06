@@ -18,6 +18,8 @@
   })();
 
 	</script>
+  <%= auto_discovery_link_tag :atom, "/feed" %>
+  <%= auto_discovery_link_tag :rss, "/feed.rss" %>
 </head>
 <body>
 	<%= flash[:notice] %>
