@@ -115,7 +115,7 @@ nav li {
 	border: solid black 2px;
 	font-family: 'Droid Sans', sans-serif;
 	padding: 20px;
-
+	line-height: 200%;
 }
 
 .clear {
