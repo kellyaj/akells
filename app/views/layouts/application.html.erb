@@ -3,6 +3,8 @@
   <head>
     <title>Akells</title>
     <link href="css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -33,18 +35,20 @@
       			<li> <%= link_to 'Projects', projects_url %> </li>
         	 </ul>
         	</nav>
-          <div class="social_buttons">
+          <!-- <div class="social_buttons">
             <ul>
               <li> github </li>
               <li> twitter </li>
             </ul>
-          </div>
+          </div> -->
         </div>
 
         <div class="top_box">
+          <div class="bio_box">
+            <%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
             <p class="bio"> Andrew Kelly is an aspiring web developer currently living in Chicago. He recently became a novice apprentice at <%= link_to "8th Light", "http://www.8thlight.com" %>. 
            </p>
-           <%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
+         </div>
         </div>
 
   <%= yield %>

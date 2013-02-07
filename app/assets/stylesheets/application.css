@@ -46,7 +46,20 @@ table {
 }
 /* Begin */
 
+body {
+	background-image: url(escher.png);
+	padding: 20px;
+	line-height: 150%;
+	letter-spacing: .09em;
+	word-spacing: .25em;
+}
+
+body h1 {
+	font-family: 'Armata', sans-serif;
+}
+
 .container {
+	background-image: url(whit_blue.png);
 	overflow: hidden;
 	margin: 0 auto;
 	width: 975px;
@@ -54,7 +67,6 @@ table {
 }
 
 nav {
-	background: red;
 	float: left;
 	padding: 10px;
 	padding-top: 36px;
@@ -67,28 +79,43 @@ nav li {
 }
 
 .top_box {
-	background: gray;
+	background: #E6D344;
 	float: right;
-	width: 467.5px;
-	height: 202px;
+	width: 461.5px;
+	height: 201px;
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-bottom: 30px;
+	border: solid black 2px;
+	font-family: 'Armata', sans-serif;
 }
 
 .top_box img {
 	float:left;
 }
 
+#bio_pic {
+	border: solid black 2px;
+}
+
+.bio_box {
+	padding-left: 10px;
+	padding-top: 15px;
+}
+
 .bio {
-	background: green;
 }
 
 .post_content {
-	margin-right:10px;
-	margin-left: 10px;
+	background: #E6D344;
+	width: 912px;
+	margin-right: 10px;
+	margin-left:  10px;
 	float: left;
-	background: lightblue;
+	border: solid black 2px;
+	font-family: 'Droid Sans', sans-serif;
+	padding: 20px;
+
 }
 
 .clear {
@@ -104,7 +131,6 @@ nav li {
 }
 
 .social_buttons {
-	background: darkred;
 	float: left;
 	padding: 10px;
 	padding-top: 36px;
@@ -115,3 +141,4 @@ nav li {
 	font-size: 24px;
 	padding: 70px;
 }
+
