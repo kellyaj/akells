@@ -50,8 +50,8 @@ body {
 	background-image: url(escher.png);
 	padding: 20px;
 	line-height: 150%;
-	letter-spacing: .09em;
-	word-spacing: .25em;
+	letter-spacing: .03em;
+	word-spacing: .12em;
 }
 
 body h1 {
