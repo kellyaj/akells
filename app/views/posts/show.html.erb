@@ -1,10 +1,11 @@
-<br />
-<h2>
+<div class="post_content">
+<div class="clear"></div>
+<h1 class="post_title">
   <%= @post.title %>
-</h2>
-<h3>
+</h1>
+<h2 class="post_date">
   <%= @post.created_at.in_time_zone('Central Time (US & Canada)').strftime("%B %d, %Y %l:%M%p") %>
-</h3>
+</h2>
 <p>
   <%= @post.content.html_safe %>
 </p>

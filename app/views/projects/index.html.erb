@@ -1,19 +1,17 @@
-<br />
-<br />
-
+<div class="post_content">
 <% @projects.each do |project| %>
 	<div id="project_div">
 	<ul>
 		<li>
-		  <h2 id="project_image">
+		  <h2 class="project_image">
 		  	<%= link_to image_tag(project.avatar.url(:medium)), project.url %>
 		  </h2>
 		</li>
 		<br />
 		<li>
-		  <h2 id="project_name">
+		  <h1 class="post_title">
 		    <%= link_to project.name, project.url %>
-		  </h2>
+		  </h1>
 		</li>
 		<li>
 		  <p id="project_description">
@@ -30,3 +28,4 @@
 <%= link_to 'New project', new_project_url, :id => "new_project" %>
 </div>
 <% end %>
+</div>

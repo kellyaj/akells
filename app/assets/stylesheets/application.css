@@ -2,7 +2,7 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a, abbr, acronym, address, big, cite, 
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -56,6 +56,12 @@ body {
 
 body h1 {
 	font-family: 'Armata', sans-serif;
+	font-variant: small-caps;
+}
+
+body a {
+	color: #2933C4;
+	text-decoration: none;
 }
 
 .container {
@@ -67,6 +73,7 @@ body h1 {
 }
 
 nav {
+	margin-top: 50px;
 	float: left;
 	padding: 10px;
 	padding-top: 36px;
@@ -96,6 +103,7 @@ nav li {
 
 #bio_pic {
 	border: solid black 2px;
+	margin-right: 10px;
 }
 
 .bio_box {
@@ -104,6 +112,7 @@ nav li {
 }
 
 .bio {
+	margin-top: 12px;
 }
 
 .post_content {
@@ -142,3 +151,7 @@ nav li {
 	padding: 70px;
 }
 
+.project_image {
+	float: left;
+	padding-right: 20px;
+}
