@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Akells</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <script type="text/javascript">
+  <head>
+    <title>Akells</title>
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-37239126-1']);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37239126-1']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-	</script>
-  <%= auto_discovery_link_tag :atom, "/feed" %>
-  <%= auto_discovery_link_tag :rss, "/feed.rss" %>
-</head>
-<body>
-	<%= flash[:notice] %>
-	<nav>
-		<ul>
-			<li> <%= link_to 'Blog', posts_url %> </li>
-			<li> <%= link_to 'Projects', projects_url %> </li>
-	</ul>
-	</nav>
-  
-<%= yield %>
+  	</script>
+    <%= auto_discovery_link_tag :atom, "/feed" %>
+    <%= auto_discovery_link_tag :rss, "/feed.rss" %>
+  </head>
 
+  <body>
+    
+  	<%= flash[:notice] %>
+    <div class="container">
+        <div class="top_box">
+        	<nav>
+        	 <ul>
+      			<li> <%= link_to 'Blog', posts_url %> </li>
+      			<li> <%= link_to 'Projects', projects_url %> </li>
+        	 </ul>
+        	</nav>
+          <div class="social_buttons">
+          </div>
+        </div>
 
-</body>
+        <div class="top_box">
+          <div class="bio_box">
+            <%= image_tag('ak_fan.jpeg', :id => "bio_pic") %>
+            <p class="bio"> Andrew Kelly is an aspiring web developer currently living in Chicago. He recently became a novice apprentice at <%= link_to "8th Light", "http://www.8thlight.com" %>. 
+           </p>
+         </div>
+        </div>
+
+  <%= yield %>
+
+    </div>
+  </body>
+
 </html>
