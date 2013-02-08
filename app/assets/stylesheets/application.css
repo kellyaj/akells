@@ -155,3 +155,9 @@ nav li {
 	float: left;
 	padding-right: 20px;
 }
+
+pre {
+	background: #cfbd3d;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
