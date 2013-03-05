@@ -132,16 +132,22 @@ nav li {
 	line-height: 200%;
 }
 
+.post_actual {
+	padding: 5px;
+}
+
 .clear {
 	clear: both;
 }
 
 .post_title {
 	font-size: 36px;
+	padding: 3px 0 3px 0;
 }
 
 .post_date {
 	font-size: 16px;
+	padding: 3px 0 3px 0;
 }
 
 .social_buttons {

@@ -7,7 +7,7 @@
   <h2 class="post_date">
   	<%= post.created_at.in_time_zone('Central Time (US & Canada)').strftime("%B %d, %Y %l:%M%p") %>
   </h2>
-  <p id="post_content"> 
+  <p class="post_actual"> 
   	<%= truncate_html(post.content, :length => 420, :word_boundary => true) %>
   </p>
   <p>
