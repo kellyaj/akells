@@ -110,7 +110,14 @@ nav li {
 }
 
 .bio {
-	margin-top: 12px;
+	margin-top: 40px;
+}
+
+.akells {
+	font-size: 48px;
+	font-variant: small-caps;
+	padding: 30px 113px 0 113px;
+	text-shadow: 1px 1px #000;
 }
 
 .post_content {
