@@ -167,6 +167,19 @@ nav li {
 	padding-right: 20px;
 }
 
+.post_content ul {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-left: 40px;
+}
+
+.post_content h2 {
+	font-family: 'Droid Sans', sans-serif;
+	font-variant: small-caps;
+	font-size: 20px;
+	font-weight: bold;
+}
+
 pre {
 	background: #B7B737;
 	margin-top: 10px;
