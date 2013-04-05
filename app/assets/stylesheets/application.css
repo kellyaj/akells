@@ -58,12 +58,12 @@ body h1 {
 }
 
 body a {
-	color: #2933C4;
+	color: #2239CC;
 	text-decoration: none;
 }
 
 .container {
-	background: #B70000;
+	background: #375D4D;
 	overflow: hidden;
 	margin: 0 auto;
 	width: 975px;
@@ -84,7 +84,7 @@ nav li {
 }
 
 .top_box {
-	background: #C6C63C;
+	background: #62C8D1;
 	float: right;
 	width: 461.5px;
 	height: 201px;
@@ -121,7 +121,7 @@ nav li {
 }
 
 .post_content {
-	background: #C6C63C ;
+	background: #62C8D1 ;
 	width: 912px;
 	margin-right: 10px;
 	margin-left:  10px;
@@ -181,9 +181,13 @@ nav li {
 }
 
 pre {
-	background: #B7B737;
+	background: #59B4BF;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding-left: 5px;
+}
+
+.project_content ul {
+	list-style-type: none;
 }
 
